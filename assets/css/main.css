@@ -1870,21 +1870,26 @@ background: #f7f4ec;
     font-size: 1rem;
   }
 
- .portal-ref-right {
-  width: 60%;
+.portal-ref-right {
   position: relative;
-  height: 650px;
+  height: 620px;
 }
 
 .portal-bloco {
   position: absolute;
-  background: #ffffff;
+  width: auto;
+  min-height: auto;
   border-radius: 20px;
-  padding: 14px 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  font-weight: 600;
-  text-align: center;
 }
+
+.b1 { top: 20px; left: 120px; }
+.b2 { top: 40px; right: 80px; }
+.b3 { top: 180px; right: 0; }
+.b4 { top: 320px; right: 60px; }
+.b5 { top: 460px; right: 140px; }
+.b6 { top: 460px; left: 120px; }
+.b7 { top: 320px; left: 40px; }
+.b8 { top: 180px; left: 0; }
 }
 
 @media (max-width: 576px) {
