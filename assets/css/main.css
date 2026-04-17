@@ -1803,13 +1803,14 @@ section,
 .portal-ref-right {
   width: 58%;
   position: relative;
-  height: 720px;
+  height: 680px;
+  margin-left: -30px;
 }
 
 .portal-bloco {
   position: absolute;
   background: #ffffff;
-  border-radius: 38px;
+  border-radius: 30px;
   box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
@@ -1817,43 +1818,43 @@ section,
   font-weight: 700;
   color: #2f2a24;
   text-align: center;
-  padding: 20px;
+  padding: 14px;
 }
 
 /* posições aproximando da referência */
 .bloco-topo-pequeno {
-  width: 180px;
-  height: 110px;
-  top: 20px;
-  left: 90px;
+  width: 150px;
+  height: 90px;
+  top: 40px;
+  left: 10px;
 }
 
 .bloco-topo-grande {
-  width: 260px;
-  height: 180px;
-  top: 10px;
-  right: 60px;
+  width: 180px;
+  height: 120px;
+  top: 90px;
+  right: 90px;
 }
 
 .bloco-meio-grande {
-  width: 300px;
-  height: 210px;
-  top: 210px;
-  right: 20px;
+  width: 190px;
+  height: 120px;
+  top: 250px;
+  right: 40px;
 }
 
 .bloco-baixo-grande {
-  width: 280px;
-  height: 220px;
-  top: 450px;
+  width: 180px;
+  height: 120px;
+  top: 430px;
   right: 80px;
 }
 
 .bloco-baixo-pequeno {
-  width: 210px;
-  height: 130px;
-  top: 540px;
-  left: 160px;
+  width: 150px;
+  height: 90px;
+  top: 560px;
+  left: 90px;
 }
 
 @media (max-width: 991px) {
