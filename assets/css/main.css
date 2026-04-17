@@ -1823,38 +1823,39 @@ section,
 
 /* posições aproximando da referência */
 .bloco-topo-pequeno {
-  width: 150px;
-  height: 90px;
-  top: 40px;
-  left: 10px;
+  width: 140px;
+  height: 80px;
+  top: 20px;
+  left: 40px;
 }
 
 .bloco-topo-grande {
-  width: 180px;
+  width: 200px;
   height: 120px;
-  top: 90px;
-  right: 90px;
+  top: 40px;
+  right: 60px;
+}
 }
 
 .bloco-meio-grande {
-  width: 190px;
+  width: 200px;
   height: 120px;
-  top: 250px;
-  right: 40px;
+  top: 200px;
+  right: 0;
 }
 
 .bloco-baixo-grande {
-  width: 180px;
+  width: 200px;
   height: 120px;
-  top: 430px;
-  right: 80px;
+  bottom: 60px;
+  right: 40px;
 }
 
 .bloco-baixo-pequeno {
-  width: 150px;
-  height: 90px;
-  top: 560px;
-  left: 90px;
+  width: 140px;
+  height: 80px;
+  bottom: 20px;
+  left: 80px;
 }
 
 @media (max-width: 991px) {
