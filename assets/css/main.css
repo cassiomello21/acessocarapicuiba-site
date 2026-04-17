@@ -1748,3 +1748,176 @@ section,
     font-size: 1.7rem;
   }
 }
+.portal-ref {
+  background: #f7f4ec;
+  padding: 70px 0;
+  overflow: hidden;
+}
+
+.portal-ref-wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  min-height: 760px;
+}
+
+.portal-ref-left {
+  width: 42%;
+  position: relative;
+}
+
+.portal-ref-circle {
+  width: 760px;
+  height: 760px;
+  margin-left: -300px;
+  border-radius: 50%;
+  background: #e7e5d9;
+  box-shadow: inset 0 0 0 18px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portal-ref-texto {
+  width: 310px;
+  margin-left: 170px;
+  text-align: left;
+}
+
+.portal-ref-texto h2 {
+  font-size: 3.3rem;
+  line-height: 1.03;
+  font-weight: 800;
+  color: #2d5f44;
+  margin-bottom: 18px;
+}
+
+.portal-ref-texto p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #445046;
+  margin: 0;
+}
+
+.portal-ref-right {
+  width: 58%;
+  position: relative;
+  height: 720px;
+}
+
+.portal-bloco {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 38px;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #2f2a24;
+  text-align: center;
+  padding: 20px;
+}
+
+/* posições aproximando da referência */
+.bloco-topo-pequeno {
+  width: 180px;
+  height: 110px;
+  top: 20px;
+  left: 90px;
+}
+
+.bloco-topo-grande {
+  width: 260px;
+  height: 180px;
+  top: 10px;
+  right: 60px;
+}
+
+.bloco-meio-grande {
+  width: 300px;
+  height: 210px;
+  top: 210px;
+  right: 20px;
+}
+
+.bloco-baixo-grande {
+  width: 280px;
+  height: 220px;
+  top: 450px;
+  right: 80px;
+}
+
+.bloco-baixo-pequeno {
+  width: 210px;
+  height: 130px;
+  top: 540px;
+  left: 160px;
+}
+
+@media (max-width: 991px) {
+  .portal-ref-wrap {
+    display: block;
+    min-height: auto;
+  }
+
+  .portal-ref-left,
+  .portal-ref-right {
+    width: 100%;
+  }
+
+  .portal-ref-circle {
+    width: 420px;
+    height: 420px;
+    margin: 0 auto 40px auto;
+  }
+
+  .portal-ref-texto {
+    width: 220px;
+    margin-left: 40px;
+  }
+
+  .portal-ref-texto h2 {
+    font-size: 2.2rem;
+  }
+
+  .portal-ref-texto p {
+    font-size: 1rem;
+  }
+
+  .portal-ref-right {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 0 20px 20px;
+  }
+
+  .portal-bloco {
+    position: static;
+    width: 100%;
+    min-height: 120px;
+    border-radius: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .portal-ref-right {
+    grid-template-columns: 1fr;
+  }
+
+  .portal-ref-circle {
+    width: 320px;
+    height: 320px;
+  }
+
+  .portal-ref-texto {
+    width: 170px;
+    margin-left: 20px;
+  }
+
+  .portal-ref-texto h2 {
+    font-size: 1.7rem;
+  }
+}
