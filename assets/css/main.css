@@ -1749,7 +1749,7 @@ section,
   }
 }
 .portal-ref {
-  background: #f7f4ec;
+ background: red;
   padding: 70px 0;
   overflow: hidden;
 }
