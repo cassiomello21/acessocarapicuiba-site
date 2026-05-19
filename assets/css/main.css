@@ -1949,3 +1949,21 @@ background: #f7f4ec;
     font-size: 1.7rem;
   }
 }
+.nav-box {
+  display: block;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  color: #2e7d32;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.nav-box:hover {
+  background: #2e7d32;
+  color: white;
+  transform: translateY(-5px);
+}
