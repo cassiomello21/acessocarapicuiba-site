@@ -1007,41 +1007,20 @@ body, a, button, .vagon-btn, .ep-card, .dest-card {
 .af-product-card .af-img img{width:100%;height:100%;object-fit:contain;display:block;border:0!important;box-shadow:none!important;background:transparent!important;}
 
 
-
-
-
-/* Correção definitiva do vídeo: embed YouTube responsivo no desktop e no mobile */
-.hero-video-frame {
-  position: relative !important;
-  overflow: hidden !important;
-  background: #000 !important;
-  isolation: isolate !important;
-}
-
-.hero-video-frame iframe,
-.video-embed {
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-  border: 0 !important;
-  filter: none !important;
-  opacity: 1 !important;
-  mix-blend-mode: normal !important;
-  background: #000 !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 5 !important;
-}
-
-.hero-video-frame::before,
-.hero-video-frame::after {
-  pointer-events: none !important;
-}
-
+/* Ajuste mínimo do cursor e vídeo */
 .hero-video-frame iframe,
 .video-embed,
 .video-quality-link {
   cursor: pointer !important;
+  pointer-events: auto !important;
+}
+@media (hover: none), (pointer: coarse) {
+  #cur {
+    display: none !important;
+  }
+  body {
+    cursor: auto !important;
+  }
 }
 
 </style>
@@ -1962,24 +1941,16 @@ function closeMenu(){
 
 // ── CURSOR PENA ────────────────────────────────────────────────────────────
 const curEl = document.getElementById('cur');
-const isTouchDevice = window.matchMedia('(hover: none), (pointer: coarse)').matches;
-if (curEl && isTouchDevice) {
-  curEl.style.display = 'none';
-  document.body.style.cursor = 'auto';
-}
 let mx=window.innerWidth/2,my=window.innerHeight/2,px=mx,py=my;
-document.addEventListener('mousemove', e=>{ mx=e.clientX; my=e.clientY; px=mx; py=my; }, {passive:true});
+document.addEventListener('mousemove', e=>{ mx=e.clientX; my=e.clientY; });
 (function al(){
-  if(curEl && !isTouchDevice){ curEl.style.left=px+'px'; curEl.style.top=py+'px'; }
+  px=mx; py=my;
+  if(curEl){ curEl.style.left=px+'px'; curEl.style.top=py+'px'; }
   requestAnimationFrame(al);
 })();
 document.querySelectorAll('a,button,[onclick]').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{ if(curEl && !isTouchDevice) curEl.style.transform='translate(-8px,-44px) rotate(-8deg) scale(1.08)'; });
-  el.addEventListener('mouseleave',()=>{ if(curEl && !isTouchDevice) curEl.style.transform='translate(-8px,-44px) rotate(-22deg) scale(1)'; });
-});
-document.querySelectorAll('iframe,.hero-video-frame,.video-embed').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{ if(curEl) curEl.style.display='none'; });
-  el.addEventListener('mouseleave',()=>{ if(curEl && !isTouchDevice) curEl.style.display='block'; });
+  el.addEventListener('mouseenter',()=>{ if(curEl) curEl.style.transform='translate(-8px,-44px) rotate(-8deg) scale(1.12)'; });
+  el.addEventListener('mouseleave',()=>{ if(curEl) curEl.style.transform='translate(-8px,-44px) rotate(-22deg) scale(1)'; });
 });
 
 // ── CARDS EXPANSÍVEIS ──────────────────────────────────────────────────────
