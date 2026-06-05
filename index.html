@@ -927,24 +927,6 @@ body, a, button, .vagon-btn, .ep-card, .dest-card {
 /* Correção: imagens dos afiliados embutidas e padronizadas */
 .af-product-card .af-img{height:160px;background:rgba(255,248,230,.72);display:flex;align-items:center;justify-content:center;padding:14px;border-bottom:1px solid rgba(128,96,32,.16);}
 .af-product-card .af-img img{width:100%;height:100%;object-fit:contain;display:block;border:0!important;box-shadow:none!important;background:transparent!important;}
-
-/* Ajuste pontual: links do rodapé e placeholder discreto do Sobre o Projeto */
-footer a{
-  color:rgba(255,240,200,.75)!important;
-  text-decoration:none!important;
-  transition:color .2s ease;
-}
-footer a:hover{color:#D4A017!important;}
-.foot-contact{border-top:1px solid rgba(212,160,23,.12);padding-top:20px;margin-top:28px;}
-.ep-img-placeholder-sobre{
-  width:100%;
-  align-items:center;
-  justify-content:center;
-  border:1px dashed rgba(185,137,34,.45);
-  background:rgba(255,246,218,.55);
-  border-radius:4px;
-}
-
 </style>
 <style id="ajustes-finais-assets">
   html, body { cursor: auto !important; }
@@ -1036,6 +1018,29 @@ footer a:hover{color:#D4A017!important;}
   .hero-home-cta-overlay{left:22%;top:83.5%;width:56%;height:8.5%;}
 }
 </style>
+
+<style id="ajuste-seguro-links-e-placeholder">
+footer a{
+  color:rgba(255,240,200,.75)!important;
+  text-decoration:none!important;
+  transition:color .2s ease;
+}
+footer a:hover{color:#D4A017!important;}
+.ep-img-placeholder-text{
+  width:100%;
+  min-height:220px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#6a5126;
+  font-family:'IM Fell English',serif;
+  font-style:italic;
+  border:1px dashed rgba(185,137,34,.45);
+  background:rgba(255,246,218,.45);
+  border-radius:4px;
+}
+</style>
+
 </head>
 <body><img alt="" aria-hidden="true" class="cursor-feather" id="cur" src="imagens/imagem-010.png"/>
 <!-- CURSOR PENA INDÍGENA -->
@@ -1679,17 +1684,18 @@ footer a:hover{color:#D4A017!important;}
 </div>
 <div class="ep-body" id="epb-cultura-pop">
 <div class="ep-img-wrap">
-<img alt="Cultura POP em Carapicuíba" loading="lazy" src="imagens/cultura-pop.png"/>
+<img alt="Cultura POP em Carapicuíba" loading="lazy" src="imagens/cultura-pop.png" data-fallbacks="imagens/imagem-045.png,imagens/imagem-045.jpg,imagens/imagem-046.png,imagens/imagem-046.jpg"/>
 </div>
 </div>
 </div>
+
 <div class="ep-card" id="ep-sobre-o-projeto" onclick="toggleCard('sobre-o-projeto')">
 <div class="ep-card-header">
 <div class="ep-card-left">
 <span class="ep-num">21</span>
 <div class="ep-card-info">
 <span class="ep-tag">Projeto Acadêmico</span>
-<h3 class="ep-title">SOBRE O PROJETO</h3>
+<h3 class="ep-title">Sobre o Projeto</h3>
 <p class="ep-sub">Portal educacional e cultural criado para valorizar a memória de Carapicuíba</p>
 </div>
 </div>
@@ -1701,35 +1707,33 @@ footer a:hover{color:#D4A017!important;}
 </div>
 </div>
 <div class="ep-body" id="epb-sobre-o-projeto">
-<div class="ep-img-wrap ep-img-wrap-sobre">
-<img alt="Sobre o Projeto Acesso Carapicuíba" loading="lazy" src="imagens/sobre-o-projeto.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
-<div class="ep-img-placeholder ep-img-placeholder-sobre" style="display:none; font-size:18px; color:#6a5126; font-family:'IM Fell English',serif; font-style:italic; min-height:260px;">Imagem sobre o projeto em preparação.</div>
+<div class="ep-img-wrap">
+<img alt="Sobre o Projeto Acesso Carapicuíba" loading="lazy" src="imagens/sobre-o-projeto.jpg" data-placeholder="Imagem sobre o projeto em preparação."/>
 </div>
 </div>
-</div></div>
 </div>
-</section>
+
 <div class="era-divider"></div>
 <!-- ═══════════════════════════════════════════════════════════
      DESTAQUES CULTURAIS
-═══════════════════════════════════════════════════════════ -->
+════════════════════════════════════════════════════════════ -->
 <section id="destaques">
 <div class="dest-header reveal">
 <span class="dest-era-tag">Patrimônio e Cultura Viva</span>
 <h2 class="dest-htitle">Destaques <em>Culturais</em></h2>
 </div>
 <div class="dest-grid">
-<div class="dest-card reveal d1 dest-clickable" id="ceeacs" onclick="openVagonInfografico('imagens/imagem-036.png','CEEACs')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/imagem-036.png','CEEACs');}" role="button" tabindex="0">
+<div class="dest-card reveal d1 dest-clickable" id="ceeacs" onclick="openVagonInfografico('imagens/ceeac.png','CEEACs')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/ceeac.png','CEEACs');}" role="button" tabindex="0">
 <span class="dest-icon">🏫</span>
 <div class="dest-tc">CEEACs</div>
-<div class="dest-tx">Centros de Educação, Esporte, Arte e Cultura de Carapicuíba. Espaços de formação, convivência e valorização cultural.</div>
+<div class="dest-tx">Centros de Educação, Esporte, Arte e Cultura em Carapicuíba. Espaços de formação, convivência e valorização cultural.</div>
 </div>
 <div class="dest-card reveal d1 dest-clickable" onclick="openVagonInfografico('imagens/imagem-037.png','Aldeia Jesuítica')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/imagem-038.png','Aldeia Jesuítica');}" role="button" tabindex="0">
 <span class="dest-icon">⛪</span>
 <div class="dest-tc">Aldeia Jesuítica</div>
 <div class="dest-tx">Única das 12 aldeias do séc. XVI com estrutura intacta. Tombada IPHAN 1940. Palco da Festa de Santa Cruz e da Paixão de Cristo.</div>
 </div>
-<div class="dest-card reveal d2 dest-clickable" onclick="openVagonInfografico('imagens/imagem-039.png','Negritude Jr.')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/imagem-040.png','Negritude Jr.');}" role="button" tabindex="0">
+<div class="dest-card reveal d2 dest-clickable" onclick="openVagonInfografico('imagens/negritude-jr.png','Negritude Jr.')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/negritude-jr.png','Negritude Jr.');}" role="button" tabindex="0">
 <span class="dest-icon">🎸</span>
 <div class="dest-tc">Negritude Jr.</div>
 <div class="dest-tx">Grupo formado na COHAB, famoso pela icônica "Cohab City". Um dos maiores talentos culturais carapicuibanos.</div>
@@ -1744,12 +1748,12 @@ footer a:hover{color:#D4A017!important;}
 <div class="dest-tc">Comunidade Boliviana</div>
 <div class="dest-tx">Maior comunidade boliviana da Zona Oeste. Lei nº 4090/2024 institui o Dia do Imigrante Boliviano.</div>
 </div>
-<div class="dest-card reveal d5 dest-clickable" onclick="openVagonInfografico('imagens/imagem-045.png','Cultura POP')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/imagem-046.png','Cultura POP');}" role="button" tabindex="0">
+<div class="dest-card reveal d5 dest-clickable" onclick="openVagonInfografico('imagens/cultura-pop.png','Cultura POP')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/cultura-pop.png','Cultura POP');}" role="button" tabindex="0">
 <span class="dest-icon">🎵</span>
 <div class="dest-tc">Cultura POP</div>
 <div class="dest-tx">Cenário para Mazzaropi e Roberto Carlos. Citada em "Ônibusfobia" do Jota Quest. 445 anos de história viva.</div>
 </div>
-<div class="dest-card reveal d1 dest-clickable" onclick="openVagonInfografico('imagens/imagem-047.png','Conexão Logística')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/imagem-048.png','Conexão Logística');}" role="button" tabindex="0">
+<div class="dest-card reveal d1 dest-clickable" onclick="openVagonInfografico('imagens/linha-8-diamante.jpg','Conexão Logística')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/linha-8-diamante.jpg','Conexão Logística');}" role="button" tabindex="0">
 <span class="dest-icon">🚇</span>
 <div class="dest-tc">Conexão Logística</div>
 <div class="dest-tx">Conecta Carapicuíba via ViaMobilidade. Terminal José Ribeiro. Rodoanel, Castelo Branco e Raposo Tavares.</div>
@@ -1848,8 +1852,9 @@ footer a:hover{color:#D4A017!important;}
 </ul>
 </div>
 </div>
+
 <div class="foot-bot foot-contact" style="justify-content:center;">
-<span class="foot-cr">E-mail: <a href="mailto:acessocarapicuiba@gmail.com">acessocarapicuiba@gmail.com</a> · Portfólio: <a href="https://linktr.ee/cassiomello21" rel="noopener" target="_blank">https://linktr.ee/cassiomello21</a></span>
+<span class="foot-cr">E-mail: <a href="mailto:acessocarapicuiba@gmail.com">acessocarapicuiba@gmail.com</a> · Portfólio: <a href="https://linktr.ee/cassiomello21" target="_blank" rel="noopener">https://linktr.ee/cassiomello21</a></span>
 </div>
 <div class="foot-bot" style="justify-content:center;">
 <span class="foot-cr">Concepção, Pesquisa Histórica, Design e Desenvolvimento: Cassio Mello · Designer de Mídias Digitais – FATEC Carapicuíba (2026)</span>
@@ -1930,7 +1935,7 @@ footer a:hover{color:#D4A017!important;}
 ═══════════════════════════════════════════════════════════ -->
 <script>
 // ── DADOS DAS SEÇÕES (para o modal) ────────────────────────────────────────
-const SECTIONS_DATA = [{"id": "numeros", "icon": "\ud83d\udcca", "title": "O Munic\u00edpio em N\u00fameros Gerais"}, {"id": "localizacao", "icon": "\ud83d\uddfa\ufe0f", "title": "Localiza\u00e7\u00e3o Estrat\u00e9gica na Zona Oeste"}, {"id": "nome", "icon": "\ud83d\udc1f", "title": "O Enigma do Nome: Peixe ou Pau Podre?"}, {"id": "evolucao", "icon": "\ud83d\ude82", "title": "Quatro S\u00e9culos de Evolu\u00e7\u00e3o"}, {"id": "aldeia", "icon": "\u26ea", "title": "A \u00danica Aldeia Preservada"}, {"id": "brasao", "icon": "\ud83d\udee1\ufe0f", "title": "Decodificando o Bras\u00e3o de Armas"}, {"id": "bandeira", "icon": "\ud83d\udea9", "title": "O Simbolismo da Bandeira Municipal"}, {"id": "hino", "icon": "\ud83c\udfb5", "title": "O Hino da Cidade"}, {"id": "povo", "icon": "\ud83d\udc65", "title": "Quem \u00e9 o Carapicuibano?"}, {"id": "cultura", "icon": "\ud83c\udfad", "title": "Talentos e Cultura Pop"}, {"id": "lazer", "icon": "\ud83c\udf33", "title": "\u00c1reas Verdes e Lazer"}, {"id": "educacao", "icon": "\ud83d\udcda", "title": "Panorama Educacional"}, {"id": "saude", "icon": "\ud83c\udfe5", "title": "Sa\u00fade e Saneamento B\u00e1sico"}, {"id": "mobilidade", "icon": "\ud83d\ude87", "title": "Mobilidade e Conex\u00f5es"}, {"id": "economia", "icon": "\ud83c\udfea", "title": "Perfil Econ\u00f4mico: Servi\u00e7os e Atacado"}, {"id": "financeiro", "icon": "\ud83d\udcb0", "title": "Indicadores Financeiros (2024)"}, {"id": "admin", "icon": "\ud83c\udfdb\ufe0f", "title": "Hist\u00f3rico Administrativo"}, {"id": "ambiente", "icon": "\ud83c\udf3f", "title": "Meio Ambiente e Territ\u00f3rio"}, {"id": "metro", "icon": "\ud83c\udf06", "title": "Carapicu\u00edba no Contexto Metropolitano"}];
+const SECTIONS_DATA = [{"id": "numeros", "icon": "\ud83d\udcca", "title": "O Munic\u00edpio em N\u00fameros Gerais"}, {"id": "localizacao", "icon": "\ud83d\uddfa\ufe0f", "title": "Localiza\u00e7\u00e3o Estrat\u00e9gica na Zona Oeste"}, {"id": "nome", "icon": "\ud83d\udc1f", "title": "O Enigma do Nome: Peixe ou Pau Podre?"}, {"id": "evolucao", "icon": "\ud83d\ude82", "title": "Quatro S\u00e9culos de Evolu\u00e7\u00e3o"}, {"id": "aldeia", "icon": "\u26ea", "title": "A \u00danica Aldeia Preservada"}, {"id": "brasao", "icon": "\ud83d\udee1\ufe0f", "title": "Decodificando o Bras\u00e3o de Armas"}, {"id": "bandeira", "icon": "\ud83d\udea9", "title": "O Simbolismo da Bandeira Municipal"}, {"id": "hino", "icon": "\ud83c\udfb5", "title": "O Hino da Cidade"}, {"id": "povo", "icon": "\ud83d\udc65", "title": "Quem \u00e9 o Carapicuibano?"}, {"id": "cultura", "icon": "\ud83c\udfad", "title": "Talentos e Cultura Pop"}, {"id": "lazer", "icon": "\ud83c\udf33", "title": "\u00c1reas Verdes e Lazer"}, {"id": "educacao", "icon": "\ud83d\udcda", "title": "Panorama Educacional"}, {"id": "saude", "icon": "\ud83c\udfe5", "title": "Sa\u00fade e Saneamento B\u00e1sico"}, {"id": "mobilidade", "icon": "\ud83d\ude87", "title": "Mobilidade e Conex\u00f5es"}, {"id": "economia", "icon": "\ud83c\udfea", "title": "Perfil Econ\u00f4mico: Servi\u00e7os e Atacado"}, {"id": "financeiro", "icon": "\ud83d\udcb0", "title": "Indicadores Financeiros (2024)"}, {"id": "admin", "icon": "\ud83c\udfdb\ufe0f", "title": "Hist\u00f3rico Administrativo"}, {"id": "ambiente", "icon": "\ud83c\udf3f", "title": "Meio Ambiente e Territ\u00f3rio"}, {"id": "metro", "icon": "\ud83c\udf06", "title": "Carapicu\u00edba no Contexto Metropolitano"}, {"id": "cultura-pop", "icon": "\ud83c\udfb5", "title": "Cultura POP"}, {"id": "sobre-o-projeto", "icon": "\ud83d\udcda", "title": "Sobre o Projeto"}];
 
 // ── IMAGENS DAS PÁGINAS (base64 inline) ────────────────────────────────────
 const PAGE_IMGS = {
@@ -1953,6 +1958,8 @@ const PAGE_IMGS = {
   "17": "imagens/imagem-073.jpg",
   "18": "imagens/imagem-074.png",
   "19": "imagens/imagem-075.jpg",
+  "20": "imagens/cultura-pop.png",
+  "21": "imagens/sobre-o-projeto.jpg",
 };
 
 // ── MENU MOBILE ────────────────────────────────────────────────────────────
@@ -2090,22 +2097,7 @@ document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>obs.observe
     const modal=ensureVagonModal();
     const img=modal.querySelector('#vagonModalImg');
     const ttl=modal.querySelector('#vagonModalTitle');
-    const fallbackMap={
-      'CEEACs':['imagens/ceeac.png','imagens/imagem-036.png','imagens/imagem-036.jpg'],
-      'Aldeia Jesuítica':['imagens/aldeia-jesuitica.png','imagens/imagem-037.png','imagens/imagem-038.png'],
-      'Negritude Jr.':['imagens/negritude-jr.png','imagens/negritude-jr.jpg','imagens/imagem-039.png','imagens/imagem-040.png'],
-      'BMX Olímpico':['imagens/bmx-olimpico.png','imagens/imagem-041.png','imagens/imagem-042.png'],
-      'Comunidade Boliviana':['imagens/comunidade-boliviana.png','imagens/imagem-043.png','imagens/imagem-044.png'],
-      'Cultura POP':['imagens/cultura-pop.png','imagens/imagem-045.png','imagens/imagem-046.png'],
-      'Conexão Logística':['imagens/linha-8-diamante.jpg','imagens/imagem-047.png','imagens/imagem-048.png']
-    };
-    const list=[src].concat(fallbackMap[title]||[]).filter(Boolean);
-    let idx=0;
-    img.onerror=function(){
-      idx++;
-      if(idx<list.length && img.src.indexOf(list[idx])===-1){ img.src=list[idx]; }
-    };
-    img.src=list[idx];
+    img.src=src;
     img.alt=title || 'Infográfico da linha do tempo';
     ttl.textContent=title || 'Infográfico da linha do tempo';
     modal.classList.add('open');
@@ -2132,37 +2124,6 @@ document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>obs.observe
     if(e.key==='Escape' && modal && modal.classList.contains('open')) closeVagonModal();
   });
 })();
-
-// ── ÂNCORAS FUTURAS: #ceeacs, #cultura-pop, #memorial-digital, #sobre-o-projeto ──
-(function(){
-  function handleHashAnchor(){
-    const hash=(window.location.hash||'').replace('#','');
-    if(!hash) return;
-    const anchorTargets={
-      'ceeacs':'ceeacs',
-      'cultura-pop':'ep-cultura-pop',
-      'memorial-digital':'exposicao',
-      'sobre-o-projeto':'ep-sobre-o-projeto'
-    };
-    const targetId=anchorTargets[hash]||hash;
-    const el=document.getElementById(targetId);
-    if(!el) return;
-    setTimeout(function(){
-      el.scrollIntoView({behavior:'smooth', block:'center'});
-      if(hash==='ceeacs' && typeof openVagonInfografico==='function'){
-        setTimeout(function(){ openVagonInfografico('imagens/imagem-036.png','CEEACs'); }, 450);
-      }
-      if(hash==='cultura-pop' && typeof toggleCard==='function'){
-        setTimeout(function(){ toggleCard('cultura-pop'); }, 450);
-      }
-      if(hash==='sobre-o-projeto' && typeof toggleCard==='function'){
-        setTimeout(function(){ toggleCard('sobre-o-projeto'); }, 450);
-      }
-    }, 300);
-  }
-  window.addEventListener('load', handleHashAnchor);
-  window.addEventListener('hashchange', handleHashAnchor);
-})();
 </script>
 <script id="ajuste-final-cursor-js">
 (function(){
@@ -2183,5 +2144,120 @@ document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>obs.observe
   tick();
 })();
 </script>
+
+<script id="fallback-seguro-imagens">
+(function(){
+  const NAMED_FALLBACKS = {
+    "imagem-034": ["imagens/imagem-034.jpg","imagens/imagem-034.png"],
+    "imagem-036": ["imagens/ceeac.png","imagens/ceeac.jpg","imagens/imagem-036.jpg","imagens/imagem-036.png"],
+    "ceeac": ["imagens/ceeac.png","imagens/ceeac.jpg","imagens/imagem-036.png","imagens/imagem-036.jpg"],
+    "imagem-037": ["imagens/aldeia-jesuitica.png","imagens/imagem-037.png","imagens/imagem-037.jpg"],
+    "imagem-038": ["imagens/aldeia-jesuitica.png","imagens/imagem-038.png","imagens/imagem-038.jpg"],
+    "imagem-039": ["imagens/negritude-jr.png","imagens/negritude-jr.jpg","imagens/imagem-039.png","imagens/imagem-039.jpg"],
+    "imagem-040": ["imagens/negritude-jr.png","imagens/negritude-jr.jpg","imagens/imagem-040.png","imagens/imagem-040.jpg"],
+    "negritude-jr": ["imagens/negritude-jr.png","imagens/negritude-jr.jpg","imagens/imagem-039.png","imagens/imagem-039.jpg"],
+    "imagem-041": ["imagens/bmx-olimpico.png","imagens/imagem-041.png","imagens/imagem-041.jpg"],
+    "imagem-042": ["imagens/bmx-olimpico.png","imagens/imagem-042.png","imagens/imagem-042.jpg"],
+    "imagem-043": ["imagens/comunidade-boliviana.png","imagens/imagem-043.png","imagens/imagem-043.jpg"],
+    "imagem-044": ["imagens/comunidade-boliviana.png","imagens/imagem-044.png","imagens/imagem-044.jpg"],
+    "imagem-045": ["imagens/cultura-pop.png","imagens/cultura-pop.jpg","imagens/imagem-045.png","imagens/imagem-045.jpg"],
+    "imagem-046": ["imagens/cultura-pop.png","imagens/cultura-pop.jpg","imagens/imagem-046.png","imagens/imagem-046.jpg"],
+    "cultura-pop": ["imagens/cultura-pop.png","imagens/cultura-pop.jpg","imagens/imagem-045.png","imagens/imagem-045.jpg"],
+    "imagem-047": ["imagens/linha-8-diamante.jpg","imagens/linha-8-diamante.png","imagens/imagem-047.png","imagens/imagem-047.jpg"],
+    "imagem-048": ["imagens/linha-8-diamante.jpg","imagens/linha-8-diamante.png","imagens/imagem-048.png","imagens/imagem-048.jpg"],
+    "linha-8-diamante": ["imagens/linha-8-diamante.jpg","imagens/linha-8-diamante.png","imagens/imagem-047.png","imagens/imagem-047.jpg"],
+    "imagem-050": ["imagens/imagem-050.jpg","imagens/imagem-050.png","imagens/imagem-050.jpeg","imagens/imagem-050.bin"]
+  };
+
+  function cleanPath(src){
+    try { return decodeURIComponent(String(src || '').split('?')[0].split('#')[0]); }
+    catch(e){ return String(src || '').split('?')[0].split('#')[0]; }
+  }
+  function keyFromPath(src){
+    const p = cleanPath(src);
+    const name = (p.split('/').pop() || '').replace(/\.(png|jpg|jpeg|webp|bin)$/i,'');
+    return name;
+  }
+  function generatedAlternatives(src){
+    const p = cleanPath(src);
+    const noExt = p.replace(/\.(png|jpg|jpeg|webp|bin)$/i,'');
+    const list = [noExt+'.png', noExt+'.jpg', noExt+'.jpeg', noExt+'.webp', noExt+'.bin'];
+    const key = keyFromPath(src);
+    return (NAMED_FALLBACKS[key] || []).concat(list);
+  }
+  function tryNextImage(img){
+    const tried = (img.dataset.triedFallbacks || '').split('|').filter(Boolean);
+    const explicit = (img.dataset.fallbacks || '').split(',').map(s=>s.trim()).filter(Boolean);
+    const candidates = explicit.concat(generatedAlternatives(img.getAttribute('src')));
+    const next = candidates.find(c => tried.indexOf(c) === -1 && c !== img.getAttribute('src'));
+    if(next){
+      tried.push(next);
+      img.dataset.triedFallbacks = tried.join('|');
+      img.src = next;
+      return true;
+    }
+    if(img.dataset.placeholder){
+      const box = document.createElement('div');
+      box.className = 'ep-img-placeholder-text';
+      box.textContent = img.dataset.placeholder;
+      img.replaceWith(box);
+    }
+    return false;
+  }
+  function attachFallback(img){
+    if(!img || img.dataset.safeFallbackAttached) return;
+    img.dataset.safeFallbackAttached = '1';
+    img.addEventListener('error', function(){ tryNextImage(img); });
+    if(img.complete && img.naturalWidth === 0) tryNextImage(img);
+  }
+  function scanImages(){
+    document.querySelectorAll('img').forEach(attachFallback);
+  }
+  document.addEventListener('DOMContentLoaded', scanImages);
+  window.addEventListener('load', scanImages);
+
+  function resolveAsync(src, cb){
+    const candidates = [src].concat(generatedAlternatives(src));
+    let i = 0;
+    function test(){
+      if(i >= candidates.length){ cb(src); return; }
+      const candidate = candidates[i++];
+      const probe = new Image();
+      probe.onload = function(){ cb(candidate); };
+      probe.onerror = test;
+      probe.src = candidate;
+    }
+    test();
+  }
+
+  window.addEventListener('load', function(){
+    if(typeof window.openVagonInfografico === 'function'){
+      const originalOpen = window.openVagonInfografico;
+      window.openVagonInfografico = function(src,title){
+        resolveAsync(src, function(okSrc){
+          originalOpen(okSrc, title);
+          const modalImg = document.getElementById('vagonModalImg');
+          if(modalImg) attachFallback(modalImg);
+        });
+      };
+    }
+  });
+
+  window.addEventListener('DOMContentLoaded', function(){
+    if(location.hash){
+      const target = document.querySelector(location.hash);
+      if(target){
+        setTimeout(function(){
+          target.scrollIntoView({behavior:'smooth', block:'center'});
+          if(location.hash === '#ceeacs' && typeof window.openVagonInfografico === 'function'){
+            window.openVagonInfografico('imagens/ceeac.png','CEEACs');
+          }
+        }, 400);
+      }
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
