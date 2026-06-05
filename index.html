@@ -928,13 +928,21 @@ body, a, button, .vagon-btn, .ep-card, .dest-card {
 .af-product-card .af-img{height:160px;background:rgba(255,248,230,.72);display:flex;align-items:center;justify-content:center;padding:14px;border-bottom:1px solid rgba(128,96,32,.16);}
 .af-product-card .af-img img{width:100%;height:100%;object-fit:contain;display:block;border:0!important;box-shadow:none!important;background:transparent!important;}
 
+/* Ajuste pontual: links do rodapé e placeholder discreto do Sobre o Projeto */
 footer a{
-    color: rgba(255,240,200,.75) !important;
-    text-decoration:none !important;
-    transition:color .2s ease;
+  color:rgba(255,240,200,.75)!important;
+  text-decoration:none!important;
+  transition:color .2s ease;
 }
-footer a:hover{
-    color:#D4A017 !important;
+footer a:hover{color:#D4A017!important;}
+.foot-contact{border-top:1px solid rgba(212,160,23,.12);padding-top:20px;margin-top:28px;}
+.ep-img-placeholder-sobre{
+  width:100%;
+  align-items:center;
+  justify-content:center;
+  border:1px dashed rgba(185,137,34,.45);
+  background:rgba(255,246,218,.55);
+  border-radius:4px;
 }
 
 </style>
@@ -1027,11 +1035,6 @@ footer a:hover{
   .hero-home-reference{width:100%!important;transform:none!important;object-fit:contain!important;}
   .hero-home-cta-overlay{left:22%;top:83.5%;width:56%;height:8.5%;}
 }
-</style>
-
-<style id="ajustes-ancoras-e-projeto">
-.sobre-projeto-placeholder{width:100%;max-width:960px;min-height:220px;border-radius:4px;border:1px dashed rgba(185,137,34,.45);background:rgba(255,246,218,.55);display:none;align-items:center;justify-content:center;text-align:center;color:#5b3517;font-family:'IM Fell English',serif;font-style:italic;font-size:16px;padding:28px;box-shadow:0 4px 18px rgba(91,53,23,.10);}
-.sobre-projeto-placeholder.visible{display:flex;}
 </style>
 </head>
 <body><img alt="" aria-hidden="true" class="cursor-feather" id="cur" src="imagens/imagem-010.png"/>
@@ -1628,7 +1631,7 @@ footer a:hover{
 </div>
 <div class="ep-body" id="epb-ambiente">
 <div class="ep-img-wrap">
-<img alt="Meio Ambiente e Território" loading="lazy" src="imagens/imagem-034.jpg"/>
+<img alt="Meio Ambiente e Território" loading="lazy" src="imagens/imagem-034.png"/>
 </div>
 </div>
 </div>
@@ -1657,7 +1660,7 @@ footer a:hover{
 </div>
 </div>
 </div>
-<div class="ep-card" id="ep-cultura-pop" data-anchor="cultura-pop" onclick="toggleCard('cultura-pop')">
+<div class="ep-card" id="ep-cultura-pop" onclick="toggleCard('cultura-pop')">
 <div class="ep-card-header">
 <div class="ep-card-left">
 <span class="ep-num">20</span>
@@ -1680,7 +1683,7 @@ footer a:hover{
 </div>
 </div>
 </div>
-<div class="ep-card" id="ep-sobre-o-projeto" data-anchor="sobre-o-projeto" onclick="toggleCard('sobre-o-projeto')">
+<div class="ep-card" id="ep-sobre-o-projeto" onclick="toggleCard('sobre-o-projeto')">
 <div class="ep-card-header">
 <div class="ep-card-left">
 <span class="ep-num">21</span>
@@ -1698,12 +1701,13 @@ footer a:hover{
 </div>
 </div>
 <div class="ep-body" id="epb-sobre-o-projeto">
-<div class="ep-img-wrap">
-<img alt="Sobre o Projeto Acesso Carapicuíba" loading="lazy" src="imagens/sobre-o-projeto.jpg" onerror="this.style.display='none';this.nextElementSibling.classList.add('visible');" onload="this.style.display='block';this.nextElementSibling.classList.remove('visible');"/>
-<div class="sobre-projeto-placeholder">Imagem sobre o projeto em preparação.</div>
+<div class="ep-img-wrap ep-img-wrap-sobre">
+<img alt="Sobre o Projeto Acesso Carapicuíba" loading="lazy" src="imagens/sobre-o-projeto.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+<div class="ep-img-placeholder ep-img-placeholder-sobre" style="display:none; font-size:18px; color:#6a5126; font-family:'IM Fell English',serif; font-style:italic; min-height:260px;">Imagem sobre o projeto em preparação.</div>
 </div>
 </div>
 </div></div>
+</div>
 </section>
 <div class="era-divider"></div>
 <!-- ═══════════════════════════════════════════════════════════
@@ -1715,32 +1719,37 @@ footer a:hover{
 <h2 class="dest-htitle">Destaques <em>Culturais</em></h2>
 </div>
 <div class="dest-grid">
-<div class="dest-card reveal d1 dest-clickable" id="ceeacs" data-anchor="ceeacs" onclick="openVagonInfografico('imagens/ceeac.png','CEEACs')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/ceeac.png','CEEACs');}" role="button" tabindex="0">
+<div class="dest-card reveal d1 dest-clickable" id="ceeacs" onclick="openVagonInfografico('imagens/imagem-036.png','CEEACs')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/imagem-036.png','CEEACs');}" role="button" tabindex="0">
 <span class="dest-icon">🏫</span>
 <div class="dest-tc">CEEACs</div>
-<div class="dest-tx">Centros de Educação, Esporte, Arte e Cultura em Carapicuíba.</div>
+<div class="dest-tx">Centros de Educação, Esporte, Arte e Cultura de Carapicuíba. Espaços de formação, convivência e valorização cultural.</div>
 </div>
-<div class="dest-card reveal d1 dest-clickable" onclick="openVagonInfografico('imagens/aldeia-jesuitica.png','Aldeia Jesuítica')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/aldeia-jesuitica.png','Aldeia Jesuítica');}" role="button" tabindex="0">
+<div class="dest-card reveal d1 dest-clickable" onclick="openVagonInfografico('imagens/imagem-037.png','Aldeia Jesuítica')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/imagem-038.png','Aldeia Jesuítica');}" role="button" tabindex="0">
 <span class="dest-icon">⛪</span>
 <div class="dest-tc">Aldeia Jesuítica</div>
 <div class="dest-tx">Única das 12 aldeias do séc. XVI com estrutura intacta. Tombada IPHAN 1940. Palco da Festa de Santa Cruz e da Paixão de Cristo.</div>
 </div>
-<div class="dest-card reveal d2 dest-clickable" onclick="openVagonInfografico('imagens/negritude-jr.jpg','Negritude Jr.')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/negritude-jr.jpg','Negritude Jr.');}" role="button" tabindex="0">
+<div class="dest-card reveal d2 dest-clickable" onclick="openVagonInfografico('imagens/imagem-039.png','Negritude Jr.')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/imagem-040.png','Negritude Jr.');}" role="button" tabindex="0">
 <span class="dest-icon">🎸</span>
 <div class="dest-tc">Negritude Jr.</div>
 <div class="dest-tx">Grupo formado na COHAB, famoso pela icônica "Cohab City". Um dos maiores talentos culturais carapicuibanos.</div>
 </div>
-<div class="dest-card reveal d3 dest-clickable" onclick="openVagonInfografico('imagens/bmx-olimpico.png','BMX Olímpico')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/bmx-olimpico.png','BMX Olímpico');}" role="button" tabindex="0">
+<div class="dest-card reveal d3 dest-clickable" onclick="openVagonInfografico('imagens/imagem-041.png','BMX Olímpico')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/imagem-042.png','BMX Olímpico');}" role="button" tabindex="0">
 <span class="dest-icon">🚴</span>
 <div class="dest-tc">BMX Olímpico</div>
 <div class="dest-tx">Gustavo Bala Loka — atleta olímpico nascido aqui. Pista de BMX de referência nacional, ginásios Ayrton Senna e Tancredo Neves.</div>
 </div>
-<div class="dest-card reveal d4 dest-clickable" onclick="openVagonInfografico('imagens/comunidade-boliviana.png','Comunidade Boliviana')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/comunidade-boliviana.png','Comunidade Boliviana');}" role="button" tabindex="0">
+<div class="dest-card reveal d4 dest-clickable" onclick="openVagonInfografico('imagens/imagem-043.png','Comunidade Boliviana')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/imagem-044.png','Comunidade Boliviana');}" role="button" tabindex="0">
 <span class="dest-icon">🌍</span>
 <div class="dest-tc">Comunidade Boliviana</div>
 <div class="dest-tx">Maior comunidade boliviana da Zona Oeste. Lei nº 4090/2024 institui o Dia do Imigrante Boliviano.</div>
 </div>
-<div class="dest-card reveal d1 dest-clickable" onclick="openVagonInfografico('imagens/linha-8-diamante.jpg','Conexão Logística')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/linha-8-diamante.jpg','Conexão Logística');}" role="button" tabindex="0">
+<div class="dest-card reveal d5 dest-clickable" onclick="openVagonInfografico('imagens/imagem-045.png','Cultura POP')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/imagem-046.png','Cultura POP');}" role="button" tabindex="0">
+<span class="dest-icon">🎵</span>
+<div class="dest-tc">Cultura POP</div>
+<div class="dest-tx">Cenário para Mazzaropi e Roberto Carlos. Citada em "Ônibusfobia" do Jota Quest. 445 anos de história viva.</div>
+</div>
+<div class="dest-card reveal d1 dest-clickable" onclick="openVagonInfografico('imagens/imagem-047.png','Conexão Logística')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openVagonInfografico('imagens/imagem-048.png','Conexão Logística');}" role="button" tabindex="0">
 <span class="dest-icon">🚇</span>
 <div class="dest-tc">Conexão Logística</div>
 <div class="dest-tx">Conecta Carapicuíba via ViaMobilidade. Terminal José Ribeiro. Rodoanel, Castelo Branco e Raposo Tavares.</div>
@@ -1839,9 +1848,8 @@ footer a:hover{
 </ul>
 </div>
 </div>
-
-<div class="foot-bot" style="justify-content:center;">
-<span class="foot-cr">E-mail: <a href="mailto:acessocarapicuiba@gmail.com">acessocarapicuiba@gmail.com</a> · Portfólio: <a href="https://linktr.ee/cassiomello21" target="_blank" rel="noopener">https://linktr.ee/cassiomello21</a></span>
+<div class="foot-bot foot-contact" style="justify-content:center;">
+<span class="foot-cr">E-mail: <a href="mailto:acessocarapicuiba@gmail.com">acessocarapicuiba@gmail.com</a> · Portfólio: <a href="https://linktr.ee/cassiomello21" rel="noopener" target="_blank">https://linktr.ee/cassiomello21</a></span>
 </div>
 <div class="foot-bot" style="justify-content:center;">
 <span class="foot-cr">Concepção, Pesquisa Histórica, Design e Desenvolvimento: Cassio Mello · Designer de Mídias Digitais – FATEC Carapicuíba (2026)</span>
@@ -2082,7 +2090,22 @@ document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>obs.observe
     const modal=ensureVagonModal();
     const img=modal.querySelector('#vagonModalImg');
     const ttl=modal.querySelector('#vagonModalTitle');
-    img.src=src;
+    const fallbackMap={
+      'CEEACs':['imagens/ceeac.png','imagens/imagem-036.png','imagens/imagem-036.jpg'],
+      'Aldeia Jesuítica':['imagens/aldeia-jesuitica.png','imagens/imagem-037.png','imagens/imagem-038.png'],
+      'Negritude Jr.':['imagens/negritude-jr.png','imagens/negritude-jr.jpg','imagens/imagem-039.png','imagens/imagem-040.png'],
+      'BMX Olímpico':['imagens/bmx-olimpico.png','imagens/imagem-041.png','imagens/imagem-042.png'],
+      'Comunidade Boliviana':['imagens/comunidade-boliviana.png','imagens/imagem-043.png','imagens/imagem-044.png'],
+      'Cultura POP':['imagens/cultura-pop.png','imagens/imagem-045.png','imagens/imagem-046.png'],
+      'Conexão Logística':['imagens/linha-8-diamante.jpg','imagens/imagem-047.png','imagens/imagem-048.png']
+    };
+    const list=[src].concat(fallbackMap[title]||[]).filter(Boolean);
+    let idx=0;
+    img.onerror=function(){
+      idx++;
+      if(idx<list.length && img.src.indexOf(list[idx])===-1){ img.src=list[idx]; }
+    };
+    img.src=list[idx];
     img.alt=title || 'Infográfico da linha do tempo';
     ttl.textContent=title || 'Infográfico da linha do tempo';
     modal.classList.add('open');
@@ -2110,41 +2133,36 @@ document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>obs.observe
   });
 })();
 
-// ── ÂNCORAS DIRETAS — CEEACs e compatibilidade futura ───────────────────────
+// ── ÂNCORAS FUTURAS: #ceeacs, #cultura-pop, #memorial-digital, #sobre-o-projeto ──
 (function(){
-  const anchorMap = {
-    'ceeacs': {
-      target: 'ceeacs',
-      open: function(){ openVagonInfografico('imagens/ceeac.png','CEEACs'); }
-    },
-    'cultura-pop': {
-      target: 'ep-cultura-pop',
-      open: function(){ toggleCard('cultura-pop'); }
-    },
-    'memorial-digital': {
-      target: 'exposicao',
-      open: function(){}
-    },
-    'sobre-o-projeto': {
-      target: 'ep-sobre-o-projeto',
-      open: function(){ toggleCard('sobre-o-projeto'); }
-    }
-  };
-  function handleAnchor(){
-    const key = decodeURIComponent((window.location.hash || '').replace('#','')).trim();
-    if(!key || !anchorMap[key]) return;
-    const cfg = anchorMap[key];
-    const target = document.getElementById(cfg.target);
-    if(!target) return;
+  function handleHashAnchor(){
+    const hash=(window.location.hash||'').replace('#','');
+    if(!hash) return;
+    const anchorTargets={
+      'ceeacs':'ceeacs',
+      'cultura-pop':'ep-cultura-pop',
+      'memorial-digital':'exposicao',
+      'sobre-o-projeto':'ep-sobre-o-projeto'
+    };
+    const targetId=anchorTargets[hash]||hash;
+    const el=document.getElementById(targetId);
+    if(!el) return;
     setTimeout(function(){
-      target.scrollIntoView({behavior:'smooth', block:'center'});
-      setTimeout(function(){ cfg.open(); }, 450);
-    }, 250);
+      el.scrollIntoView({behavior:'smooth', block:'center'});
+      if(hash==='ceeacs' && typeof openVagonInfografico==='function'){
+        setTimeout(function(){ openVagonInfografico('imagens/imagem-036.png','CEEACs'); }, 450);
+      }
+      if(hash==='cultura-pop' && typeof toggleCard==='function'){
+        setTimeout(function(){ toggleCard('cultura-pop'); }, 450);
+      }
+      if(hash==='sobre-o-projeto' && typeof toggleCard==='function'){
+        setTimeout(function(){ toggleCard('sobre-o-projeto'); }, 450);
+      }
+    }, 300);
   }
-  window.addEventListener('load', handleAnchor);
-  window.addEventListener('hashchange', handleAnchor);
+  window.addEventListener('load', handleHashAnchor);
+  window.addEventListener('hashchange', handleHashAnchor);
 })();
-
 </script>
 <script id="ajuste-final-cursor-js">
 (function(){
